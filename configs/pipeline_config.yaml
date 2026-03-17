@@ -1,0 +1,8 @@
+sources:
+  sales:
+    path: data/raw/sales_data.csv
+quality:
+  min_row_count: 1000
+  unique_columns: [order_id]
+  required_columns: [order_id, customer_id, revenue]
+  non_negative_columns: [revenue]
