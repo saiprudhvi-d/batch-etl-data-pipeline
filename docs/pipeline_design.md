@@ -5,10 +5,10 @@
 |-------|----------|-------------|
 | Raw | data/raw/ | Unmodified source data |
 | Clean | data/clean/ | Validated + type-cast |
-| Curated | data/curated/ | Business-ready + derived columns |
+| Curated | data/curated/ | Business-ready with derived columns |
 
 ## Modules
 - **extract/** - Load CSVs, detect nulls and duplicates
-- **transform/** - Standardize, cast types, add derived columns
-- **quality/** - Run assertions, fail on critical violations
-- **load/** - Write outputs partitioned by date
+- **transform/** - Standardize, add derived columns, filter invalids
+- **quality/** - Run assertions, fail pipeline on critical violations
+- **load/** - Write Parquet outputs partitioned by date
